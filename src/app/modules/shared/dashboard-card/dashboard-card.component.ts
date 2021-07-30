@@ -13,7 +13,6 @@ export class DashboardCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("card",this.card);
   }
 
 }

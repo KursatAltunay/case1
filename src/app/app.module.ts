@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {AlertifyService} from './core/service/alertify.service';
+import {LoginGuard} from './core/guard/login.guard';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {AlertifyService} from './core/service/alertify.service';
       HttpClientModule,
       BrowserAnimationsModule
     ],
-  providers: [AlertifyService],
+  providers: [AlertifyService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
