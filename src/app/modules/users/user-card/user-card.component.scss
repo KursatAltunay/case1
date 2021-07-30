@@ -1,0 +1,28 @@
+.card{
+  margin: 20px;
+
+  .card-footer{
+    display: flex;
+    justify-content: space-around;
+
+    a:hover{
+      cursor: pointer;
+    }
+
+    .fa{
+      font-size: 15px;
+    }
+
+    .fa-pencil{
+      color: blue;
+    }
+
+    .fa-trash{
+      color: red;
+    }
+
+    .fa-map{
+      color: darkgreen;
+    }
+  }
+}

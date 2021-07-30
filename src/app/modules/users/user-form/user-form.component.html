@@ -1,0 +1,85 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title"> {{ title }} </h3>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="userForm" class="col-lg-12">
+      <div class="form-group">
+        <label class="form-label">Adı Soyadı</label>
+        <input type="text" class="form-control" formControlName="Name">
+        <small class="text-danger"
+               *ngIf="userForm.get('Name').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Şehir</label>
+        <input type="text" class="form-control" formControlName="City">
+        <small class="text-danger"
+               *ngIf="userForm.get('City').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Ülke</label>
+        <input type="text" class="form-control" formControlName="Country">
+        <small class="text-danger"
+               *ngIf="userForm.get('Country').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Posta Kodu</label>
+        <input type="text" class="form-control" formControlName="PostCode">
+        <small class="text-danger"
+               *ngIf="userForm.get('PostCode').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Meslek</label>
+        <input type="text" class="form-control" formControlName="JobTitle">
+        <small class="text-danger"
+               *ngIf="userForm.get('JobTitle').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Telefon</label>
+        <input type="text" class="form-control" formControlName="PhoneNumber" >
+        <small class="text-danger"
+               *ngIf="userForm.get('PhoneNumber').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="Email">
+        <small class="text-danger"
+               *ngIf="userForm.get('Email').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Şifre</label>
+        <input type="password" class="form-control" formControlName="Password">
+        <small class="text-danger"
+               *ngIf="userForm.get('Password').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Araç</label>
+        <input type="text" class="form-control" formControlName="Vehicle">
+        <small class="text-danger"
+               *ngIf="userForm.get('Vehicle').hasError('required')">
+          Bu alan gereklidir.
+        </small>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer d-flex justify-content-end">
+    <button class="btn btn-secondary" (click)="closeModal()">Kapat</button>
+    <button type="button" class="btn btn-success" (click)="saveButton()">Kaydet</button>
+  </div>
+</div>

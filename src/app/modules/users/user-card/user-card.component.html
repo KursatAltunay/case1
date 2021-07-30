@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-header"> {{user.Name}} </div>
+  <div class="card-body">
+    <img src={{user.Avatar}}  alt="" class="card-img-top">
+    <p class="card-text">
+      <span class="badge bg-info">
+        <i class="fa fa-calendar"></i> Doğum Tarihi </span>
+      {{user.BirthDate | date:'dd.MM.yyyy' }}
+    </p>
+    <p class="card-text">
+      <span class="badge bg-info">
+        <i class="fa fa-globe"></i> Şehir / Ülke </span>
+      {{user.City }} / {{user.Country}}
+    </p>
+    <p class="card-text">
+      <span class="badge bg-info">
+        <i class="fa fa-envelope-o"></i> Posta Kodu </span>
+      {{user.PostCode }}
+    </p>
+    <p class="card-text">
+      <span class="badge bg-info">
+        <i class="fa fa-phone"></i> Telefon </span>
+      {{user.PhoneNumber }}
+    </p>
+<p class="card-text">
+      <span class="badge bg-info">
+        <i class="fa fa-envelope"></i> Email </span>
+      {{user.Email }}
+    </p>
+<p class="card-text">
+      <span class="badge bg-info">
+        <i class="fa fa-briefcase"></i> Meslek </span>
+      {{user.JobTitle }}
+    </p>
+
+  </div>
+  <div class="card-footer">
+    <a (click)="editUser(user.id)" title="Düzenle"> <i class="fa fa-pencil"></i> </a>
+    <a (click)="deleteUser(user.id)" title="Sil"> <i class="fa fa-trash"></i> </a>
+    <a (click)="showOnMap(user.id)" title="Haritada Göster"> <i class="fa fa-map"></i> </a>
+  </div>
+</div>

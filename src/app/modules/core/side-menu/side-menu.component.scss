@@ -1,0 +1,19 @@
+#side_menu{
+  background-color: black;
+  color: white;
+display: flex;
+  flex-direction: column;
+  height: 100vh;
+  a{
+    height: 75px;
+    padding: 25px;
+    padding-left: 30px;
+    border-bottom: 1px solid;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover{
+    background-color: lightslategray;
+  }
+}

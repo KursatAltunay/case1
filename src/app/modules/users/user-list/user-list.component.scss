@@ -1,0 +1,25 @@
+#user_list_page{
+  padding: 50px;
+
+  .user_list_header{
+    display: flex;
+    justify-content: space-between;
+
+    .fa{
+      color: green;
+      font-size: 20px;
+    }
+  }
+
+  .user_list_information{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .user_list_pagination{
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
