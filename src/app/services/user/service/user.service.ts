@@ -25,4 +25,12 @@ export class UserService {
   createUser(user: UserModel): Observable<any>{
     return this.http.post(url, user);
   }
+
+  getUserListById(id): Observable<UserModel> {
+    return this.http.get<UserModel>(url + '/' + id);
+  }
+
+  updateUser(id: string, body: UserModel): Observable<any> {
+    return this.http.put(url + '/' + id , body);
+  }
 }
